@@ -1,7 +1,7 @@
 {
   "name": "url-to-action",
-  "version": "0.0.1",
-  "description": "Run action by matched url route",
+  "version": "1.0.0",
+  "description": "Library to run action by matched URL pathname route",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
