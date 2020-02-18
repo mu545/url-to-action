@@ -58,8 +58,11 @@ const routes = {
   }
 }
 
-const router = new UrlToAction(routes)
+const router = new UrlToAction({
+  routes: routes,
+  domain: window.location.protocol + '//' + window.location.host
+})
 
-router.action('https://example.com/home') // home
-router.action('https://example.com/user/1') // user id: 1
+router.action('/home') // home
+router.action('/user/1') // user id: 1
 ```
