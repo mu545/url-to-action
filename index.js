@@ -1,7 +1,7 @@
-function UrlToAction(routes) {
+function UrlToAction({domain, routes}) {
   // a.k.a this
   const self = this
-  const currentUrl = new URL('https://url-to-action')
+  const currentUrl = new URL(domain || 'http://example.com')
 
   /**
    * Current config from current URL.
@@ -45,8 +45,8 @@ function UrlToAction(routes) {
    * @param   string
    * @return  mixed
    */
-  this.action = function (actionURL) {
-    currentUrl.href = actionURL
+  this.action = function (pathname) {
+    currentUrl.href = domain + pathname
     self.config.pathname = currentUrl.pathname.replace(/\\/g, '/')
 
     let routeKey, result
