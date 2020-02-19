@@ -77,7 +77,8 @@ function UrlToAction({domain, routes}) {
       self.config.key = routeKey
       self.config.params = params
     } else {
-      self.config.key = 'notfound'
+      routeKey = 'notfound'
+      self.config.key = routeKey
       self.config.params = {}
     }
 
